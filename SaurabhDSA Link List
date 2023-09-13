@@ -1,0 +1,548 @@
+/***************************************************LINK LIST****************************************************************************/
+// #include<iostream>
+// using namespace std;
+// struct node
+// {
+//     // public:
+//     int data;
+//     node* next;
+//     node (int n)     //syntax to declare link list
+//     {
+//         data =n;
+//         next=NULL;
+//     }
+// };
+// void insertion(node* &head,int v)
+// {    
+//     node* n=new node(v);
+//     if (head==NULL)
+//     {
+//         head=n;
+//         return;
+//     }
+//     node* temp=head;
+//     while (temp->next!=NULL)
+//     {
+//         temp=temp->next;
+//     }
+//     temp->next=n;
+// }
+// void display(node* head)
+// {
+//     node* temp=head;
+//     while (temp!=NULL)
+//     {
+//         cout<<temp->data<<"->";
+//         temp=temp->next;
+//     }
+//     cout<<"NULL";
+// }
+// int main()
+// {
+//     node* head=NULL;
+//     int n;
+//     cin>>n;
+//     for (int i=0;i<n;i++)
+//     {
+//         insertion(head,i);
+//     }
+//     display(head);
+// }
+
+// #include<iostream>
+// using namespace std;
+// struct node
+// {
+//     int data;
+//     struct node *next;
+// };
+// struct node *head=NULL;
+// struct node *temp;
+// struct node *newnode;
+// void create()
+// {
+//     char c='y';
+//         while (c=='y')
+//         {
+//             newnode=(struct node *)malloc(sizeof(struct node));
+//             cout<<"Enter the element: ";
+//             cin>>newnode->data;
+//             newnode->next=NULL;
+//             if (head==NULL)
+//             {
+//                 head=newnode;
+//                 temp=newnode;
+//             }
+//             else{
+//                 temp->next=newnode;
+//                 temp=newnode;
+//             }
+//             cout<<"Want to create another node if YES enter y or NO else enter n ";
+//             cin>>c;
+//         }
+// }
+// void display()
+// {
+//     struct node *ptr=head;
+//     while (ptr!=NULL)
+//     {
+//         cout<<ptr->data;
+//         ptr=ptr->next;
+//         cout<<"->";
+//     }
+// }
+// int main()
+// {
+//     create();
+//     display();
+// }
+
+/*wap to insert rollno and age of student and find the person age is greater the 18 if yes print i*/
+/*wap to insert the id and salary of employee and find those whose salary is greater the 45000*/
+
+// /*in a link list i am having one element and inserting at head*/
+// /*How to insert in a link list*/
+// #include<iostream>
+// using namespace std;
+// class node
+// {
+//     public:
+//     int data;
+//     node* next;
+//     node(int data)
+//     {
+//         this->data=data;
+//         this->next=NULL;
+//     }
+// };
+// void insert(node* &head, int d)
+// {
+//     node* temp=new node(d);
+//     temp->next=head;
+//     head=temp;
+// }
+// void print(node* &head)
+// {
+//     node* temp=head;
+//     while (temp!=NULL)
+//     {
+//         cout<<temp->data<<" ";
+//         cout<<temp->next<<" ";
+//         temp=temp->next;
+//     }
+//     cout<<endl;
+// }
+// int main()
+// {
+//     node* node1=new node(10);
+//     cout<<node1->data<<endl;
+//     cout<<node1->next<<endl;
+
+//     node* head=node1;
+//     insert(head,12);
+//     print(head);
+//     insert(head,15);
+//     print(head);
+//     // insert();
+// }
+
+
+// #include<iostream>
+// #include<string>
+// using namespace std;
+// class result
+// {
+//     int hno,z;
+//     string name,fname,city,country;
+//     public:
+//     result (const string& sn,const string& fn,int h,const string& c="jalandhar",const string& co="INDIA",int x=271002)
+//     {
+//         name=sn;
+//         fname=fn;
+//         hno=h;
+//         city=c;
+//         country=co;
+//         z=x;
+
+//     }
+//     void display()
+//     {
+//         cout<<name<<" "<<fname<<" "<<hno<<" "<<city<<" "<<country<<" "<<z;
+//     }
+// };
+// int main()
+// {
+//     result o("Satendr","Anil",281);
+//     o.display();
+//     return 0;
+// }
+
+// #include<iostream>
+// #include<string>
+// using namespace std;
+// class node
+// {
+//     public:
+//     string data;
+//     node* next;
+// };
+// class node* head=NULL;
+// class node* temp;
+// void insert(int n)
+// {
+//     int n1=0;
+//     while(n1<n)
+//     {
+//         node* newnode= new node();
+//         cin>>newnode->data;
+//         newnode->next=NULL;
+//         if (head==NULL)
+//         {
+//             temp=newnode;
+//             head=newnode;
+//         }
+//         else
+//         {
+//             temp->next=newnode;
+//             temp=newnode;
+//         }
+//         n1++;
+//     }
+// }
+// void print()
+// {
+//     node* temp=head;
+//     while (temp!=NULL)
+//     {
+//         cout<<temp->data<<" ";
+//         temp->next=head;
+//     }
+//     cout<<endl;
+// }
+// int main()
+// {
+//     int n;
+//     cin>>n;
+//     insert(n);
+//     print();
+//     return 0;
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+// class node
+// {
+//     public:
+//     int data;
+//     node* next;
+//     node(int data)
+//     {
+//         this->data=data;
+//         this->next=NULL;
+//     }
+// };
+// void insert(node* &head,int d)
+// {
+//     node* temp=new node(d);
+//     temp->next=head;
+//     head=temp;
+// }
+// void position(node* &tail,node* &head,int p,int d)
+// {
+//     if (p==1)
+//     {
+//         insert(head,d);
+//         return;
+//     }
+//     node* temp=head;
+//     int c=1;
+//     while (c<p-1)
+//     {
+//         temp=temp->next;
+//         c++;
+//     }
+//     if (temp->next==NULL)
+//     {
+//         insertend(tail, d);
+//         return;
+//     }
+//     node* mid=new node(d);
+//     mid->next=temp->next;
+//     temp->next=mid;
+// }
+// void insertend(node* &tail,int d)
+// {
+//     node* temp=new node(d);
+//     tail->next=temp;
+//     tail=tail->next;
+
+// }
+// void remove(int p1,node* &head)
+// {
+//     node* temp=head;
+//     while ()
+// }
+// void display(node* head)
+// {
+//     node* temp=head;
+//     while (temp!=NULL)
+//     {
+//         cout<<temp->data<<" ";
+//         temp=temp->next;
+//     }
+//     cout<<endl;
+// }
+// int main()
+// {
+//     node* node1=new node(10);
+//     node *head=node1;
+//     node* tail=node1;
+//     insert(head,20);
+//     insertend(tail,30);
+//     int p,d;
+//     cout<<"Enter the position you want to insert the node: ";
+//     cin>>p;
+//     cout<<"Enter the data: ";
+//     cin>>d;
+//     position(tail,head,p,d);
+    // display(head);
+//     cout<<head->data<<endl;
+//     cout<<tail->data<<endl;
+//     int p1;
+//     cout<<"Enter the position you want to delete the node: ";
+//     cin>>p1;
+//     remove(p1);
+// }
+
+
+// /*Bubble sort*/
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cin>>n;
+//     int arr[n];
+//     for (int i=0;i<n;i++)
+//     {
+//         cin>>arr[i];
+//     }
+//     for (int i=0;i<n;i++)
+//     {
+//         for (int j=0;j<n;j++)
+//         {
+//             if (arr[i]<arr[j])
+//             {
+//                 int temp=arr[i];
+//                 arr[i]=arr[j];
+//                 arr[j]=temp;
+//             }
+//         }
+//     }
+//     for (int i=0;i<n;i++)
+//     {
+//         cout<<arr[i]<<" ";
+//     }
+//     return 0;
+// }
+
+// /*Insertion sort*/
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cin>>n;
+//     int arr[n];
+//     for (int i=0;i<n;i++)
+//     {
+//         cin>>arr[i];
+//     }
+//     for (int i=1;i<n;i++)
+//     {
+//         int current=arr[i];
+//         int j=i-1;
+//         while (arr[j]>current&& j>=0)
+//         {
+//             arr[j+1]=arr[j];
+//             j--;
+//         }
+//         arr[j+1]=current;
+//     }
+//     for (int i=0;i<n;i++)
+//     {
+//         cout<<arr[i]<<" ";
+//     }
+//     return 0;
+// }
+
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cin>>n;
+//     int arr[n];
+//     for (int i=0;i<n;i++)
+//     {
+//         cin>>arr[i];
+//     }
+//     for (int i=0;i<n;i++)
+//     {
+//         int p=arr[i];
+//         for (int j=0;j<n;j++)
+//         {
+//             if (p<arr[j])
+//             {
+//                 int temp=arr[i];
+//                 arr[i]=arr[j];
+//                 arr[j]=temp;
+//             }
+//         }
+//     }
+//     for (int i=0;i<n;i++)
+//     {
+//         cout<<arr[i]<<" ";
+//     }
+//     return 0;
+// }
+/*selection sort*/
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cin>>n;
+//     int arr[n];
+//     for (int i=0;i<n;i++)
+//     {
+//         cin>>arr[i];
+//     }
+//     for (int i=0;i<n-1;i++)
+//     {
+//         for (int j=i+1;j<n;j++)
+//         {
+//             if (arr[j]<arr[i])
+//             {
+//                 int temp=arr[i];
+//                 arr[i]=arr[j];
+//                 arr[j]=temp;
+//             }
+//         }
+//     }
+//     for (int i=0;i<n;i++)
+//     {
+//         cout<<arr[i]<<" ";
+//     }
+//     return 0;
+// }
+
+
+
+/*bubble sort*/
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    int arr[n];
+    for (int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+    }
+    int c=0;
+    while (c<n)
+    {
+        for (int i=0;i<n-c;i++)
+        {
+            if (arr[i]>arr[i+1])
+            {
+                int temp=arr[i];
+                arr[i]=arr[i+1];
+                arr[i+1]=temp;
+            }
+        }
+        c++;
+    }
+    for (int i=0;i<n;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    return 0;
+}
+
+
+
+
+
+// #include<iostream>
+// using namespace std;
+// class node
+// {
+//     public:
+//     int data;
+//     node* next;
+//     node(int data)
+//     {
+//         this->data=data;
+//         this->next=NULL;
+//     }
+// };
+// node* head=NULL;
+// node* tail=NULL;
+// void head1(node* &head,int d)
+// {
+//     node* temp=new node(d);
+//     temp->next=head;
+//     head=temp;
+//     // tail=temp;
+// }
+// void print(node* &head)
+// {
+//     node* temp=head;
+//     while (temp!=NULL)
+//     {
+//         // if ((temp->data)%2==0)
+//         // {
+//         cout<<temp->data<<" "; 
+//         temp=temp->next;
+//         // }
+//         // else
+//         // {
+//         //     temp=temp->next;
+//         // }
+//     }
+// }
+// void print1(node* head)
+// {
+//     node* temp=head;
+//     int t=1;
+//     while (t==1)
+//     {
+//         node* t;
+//         t=temp;
+//         temp=temp->next;
+//         temp->next=t;
+//         cout<<temp->next;
+//         temp=temp->next;
+//         t=0;
+//     }
+//     cout<<endl;
+// }
+// int main()
+// {
+//     int d;
+//     cin>>d;
+//     for (int i=0;i<d;i++)
+//     {
+//         int n;
+//         cin>>n;
+//         head1(head,n);
+//     }
+//     print(head);
+//     print1(head);
+//     return 0;
+// }
